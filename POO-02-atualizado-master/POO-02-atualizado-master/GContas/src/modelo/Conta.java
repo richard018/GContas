@@ -13,10 +13,14 @@ import java.sql.Date;
  */
 public class Conta {
 
-	private int id;
-	private String concessionaria;
-	private String descricao;
-	private Date dataVencimento;
+    private int id;
+    private String concessionaria;
+    private String descricao;
+    private Date dataVencimento;
+
+    public Conta(String string, String string0, Date date) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
     public int getId() {
         return id;

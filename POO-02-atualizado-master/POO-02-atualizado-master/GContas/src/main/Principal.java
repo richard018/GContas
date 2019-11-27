@@ -13,9 +13,7 @@ import javafx.stage.Stage;
 
 public class Principal extends Application {
     
-    public static void main(String[] args) {
-        launch(args);
-    }
+   
     
     private static Stage stage;
     
@@ -34,25 +32,25 @@ public class Principal extends Application {
         stage = stageP;
         stageP.setTitle("Login");
         
-        Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/visao/Login.fxml"));
+        Parent fxmlLogin = FXMLLoader.load(getClass().getResource("/visao/Gcontas_01.fxml"));
         login = new Scene(fxmlLogin);
         
-        Parent fxmlCadastrar = FXMLLoader.load(getClass().getResource("/visao/Cadastrar.fxml"));
+        Parent fxmlCadastrar = FXMLLoader.load(getClass().getResource("/visao/GContas_01.fxml"));
         cadastrar = new Scene(fxmlCadastrar);
         
-        Parent fxmlCancelar = FXMLLoader.load(getClass().getResource("/visao/Cancelar.fxml"));
+        Parent fxmlCancelar = FXMLLoader.load(getClass().getResource("/visao/GContas_03.fxml"));
         cancelar = new Scene(fxmlCancelar);
         
-        Parent fxmlSalvar = FXMLLoader.load(getClass().getResource("/visao/Salvar.fxml"));
+        Parent fxmlSalvar = FXMLLoader.load(getClass().getResource("/visao/GContas.fxml"));
         salvar = new Scene(fxmlSalvar);
         
-        Parent fxmlAtualizar = FXMLLoader.load(getClass().getResource("/visao/Atualizar.fxml"));
+        Parent fxmlAtualizar = FXMLLoader.load(getClass().getResource("/visao/GContas.fxml"));
         atualizar = new Scene(fxmlAtualizar);
         
-        Parent fxmlApagar = FXMLLoader.load(getClass().getResource("/visao/Apagar.fxml"));
+        Parent fxmlApagar = FXMLLoader.load(getClass().getResource("/visao/GContas.fxml"));
         apagar = new Scene(fxmlApagar);
         
-        Parent fxmlLimpar = FXMLLoader.load(getClass().getResource("/visao/Limpar.fxml"));
+        Parent fxmlLimpar = FXMLLoader.load(getClass().getResource("/visao/GContas.fxml"));
         limpar = new Scene(fxmlLimpar);
         
         stageP.setScene(login);
@@ -98,6 +96,10 @@ public class Principal extends Application {
                 break;
         }
         
+    }
+    
+     public static void main(String[] args) {
+        launch(args);
     }
     
 }

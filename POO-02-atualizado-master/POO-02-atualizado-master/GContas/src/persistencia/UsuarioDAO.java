@@ -19,7 +19,7 @@ import modelo.Usuario;
  */
 public class UsuarioDAO {
 
-    private final Conexão con = new Conexão();
+    private final Conexao con = new Conexao();
     private final String INSERTUSUARIO = "INSERT INTO USUARIO (NOME, LOGIN, EMAIL, SENHA ) VALUES (?,?,?,?,?)";
     private final String LOGIN = "SELECT USUARIO FROM USUARIO  WHERE LOGIN =  ? and  SENHA =  ?";
     private final String LISTCONTAS = "SELECT * FROM USUARIO";

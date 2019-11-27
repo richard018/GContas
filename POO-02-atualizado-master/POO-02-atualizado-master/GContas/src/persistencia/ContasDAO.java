@@ -17,7 +17,7 @@ import modelo.Conta;
  * @author Aluno
  */
 public class ContasDAO {
-    private final Conexão con = new Conexão();
+    private final Conexao con = new Conexao();
     private final String INSERTCONTAS = "INSERT INTO CONTAS (CONCESSIONARIA, DESCRICAO, DATA_VENCIMENTO) VALUES (?,?,?)";
     private final String LISTCONTA = "SELECT * FROM CONTAS";
 
@@ -63,7 +63,7 @@ public class ContasDAO {
 			
 			//TRATA O RETORNO DA CONSULTA
 			while (rs.next()) { //enquanto houver registro
-				Conta u = new Conta(Conta.getString("CONCESSIONARIO"), Conta.getString("DESCRICAO"),Conta.getDate("DATAVENCIMENTO"));
+				Conta u = new Conta(rs.getString("CONCESSIONARIO"), rs.getString("DESCRICAO"),rs.getDate("DATAVENCIMENTO"));
 				lista.add(u); 
 			}
 			// DESCONECTA
@@ -71,7 +71,7 @@ public class ContasDAO {
 		} catch (SQLException e) {
                      System.out.println(e.getMessage());
 		}
-		Collections.sort(lista);
+//		Collections.sort(lista);
 		return lista;
 	}
  
